@@ -67,12 +67,79 @@
       </a>
 
       <nav class="site-nav" id="site-nav" aria-label="التنقل الرئيسي">
-        <a href="#about-scouts">عن الكشافة</a>
-        <a href="#radio-posts">مشاركات الإذاعة</a>
-        <a href="#videos">الفيديوهات</a>
-        <a href="#library-posts">مكتبة المدرسة</a>
-        <a href="#teacher-posts">مشاركات الأساتذة</a>
-        <a href="#stats">احصائيات الطلاب</a>
+        <a href="#forum-intro">
+          <span class="nav-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M8 4h8v4a4 4 0 0 1-8 0V4Z"></path>
+              <path d="M6 6H4a4 4 0 0 0 4 4"></path>
+              <path d="M18 6h2a4 4 0 0 1-4 4"></path>
+              <path d="M12 12v4"></path>
+              <path d="M9 20h6"></path>
+            </svg>
+          </span>
+          <span class="nav-label">مسابقة اللغة العربية</span>
+        </a>
+        <a href="#radio-posts">
+          <span class="nav-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M5 10h8a4 4 0 0 1 4 4v5H9a4 4 0 0 1-4-4v-5Z"></path>
+              <path d="M17 12h2a2 2 0 0 1 2 2v3"></path>
+              <path d="M8 10V7a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v3"></path>
+            </svg>
+          </span>
+          <span class="nav-label">الإذاعة المدرسية</span>
+        </a>
+        <a href="#library-posts">
+          <span class="nav-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v17H6.5A2.5 2.5 0 0 0 4 22V5.5Z"></path>
+              <path d="M20 20H6.5A2.5 2.5 0 0 0 4 22"></path>
+              <path d="M8 7h8"></path>
+              <path d="M8 11h8"></path>
+            </svg>
+          </span>
+          <span class="nav-label">المكتبة</span>
+        </a>
+        <a href="#morning-posts">
+          <span class="nav-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M3 18h18"></path>
+              <path d="M5 18a7 7 0 0 1 14 0"></path>
+              <path d="M12 4v3"></path>
+              <path d="M7.5 6.5 9 8"></path>
+              <path d="M16.5 6.5 15 8"></path>
+            </svg>
+          </span>
+          <span class="nav-label">الطابور الصباحي</span>
+        </a>
+        <a href="#mawlid-posts">
+          <span class="nav-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M15 4a6.5 6.5 0 1 0 0 13 6.5 6.5 0 1 1 0-13Z"></path>
+              <path d="m17.5 7 .7 1.4 1.6.2-1.1 1.1.3 1.6-1.5-.8-1.5.8.3-1.6-1.1-1.1 1.6-.2.7-1.4Z"></path>
+            </svg>
+          </span>
+          <span class="nav-label">المولد النبوي</span>
+        </a>
+        <a href="#teacher-posts">
+          <span class="nav-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M9 3h6"></path>
+              <path d="M10 3v4l-4.5 8.3A3 3 0 0 0 8.1 20h7.8a3 3 0 0 0 2.6-4.7L14 7V3"></path>
+              <path d="M8 14h8"></path>
+            </svg>
+          </span>
+          <span class="nav-label">الحصص التطبيقية</span>
+        </a>
+        <a href="#about-scouts">
+          <span class="nav-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 3 5 6v6c0 4.6 2.8 7.9 7 9 4.2-1.1 7-4.4 7-9V6l-7-3Z"></path>
+              <path d="m9 12 2 2 4-4"></path>
+            </svg>
+          </span>
+          <span class="nav-label">الكشافة</span>
+        </a>
       </nav>
 
       <button class="menu-toggle" type="button" aria-controls="site-nav" aria-expanded="false" aria-label="فتح القائمة">
@@ -82,6 +149,7 @@
       </button>
     </div>
   </header>
+  <div class="nav-backdrop" id="nav-backdrop" aria-hidden="true"></div>
 
   <main>
     <section class="hero reveal">
@@ -734,10 +802,10 @@
       <img src="./صور/main3.jpg" alt="الصورة الرئيسية الثالثة">
       <div class="banner-overlay">
         <div class="container">
-          <h2>مدرستنا منارة علمٍ وأدب</h2>
+          <h2>نهج المدرسة التربوي</h2>
           <p>
-            «وَقُلِ اعْمَلُوا فَسَيَرَى اللَّهُ عَمَلَكُمْ» شعار نعيشه كل يوم، فنُخلص في العمل
-            ونحتفي بإنجاز أبنائنا.
+            يعتمد نهج المدرسة على الانضباط والتعاون ومتابعة إنجاز الطلبة
+            ضمن بيئة تعليمية منظمة.
           </p>
         </div>
       </div>
@@ -764,8 +832,8 @@
           <article class="stat-card" style="--stat-image: url('./صور/2sjpg.jpg');">
             <div class="stat-content">
               <p class="stat-label">عدد صفوف التوجيهي</p>
-              <h3>10+</h3>
-              <p class="stat-note">على نظام توزيع الحقول الجديد</p>
+              <h3>5+</h3>
+              <p class="stat-note">أكاديمي + مهني</p>
             </div>
           </article>
         </div>
@@ -784,11 +852,13 @@
       </div>
       <div class="footer-col">
         <h3>روابط سريعة</h3>
-        <a href="#about-scouts">عن الكشافة</a>
-        <a href="#radio-posts">مشاركات الإذاعة</a>
-        <a href="#videos">الفيديوهات</a>
-        <a href="#library-posts">مكتبة المدرسة</a>
-        <a href="#teacher-posts">مشاركات الأساتذة</a>
+        <a href="#forum-intro">مسابقة اللغة العربية</a>
+        <a href="#radio-posts">الإذاعة المدرسية</a>
+        <a href="#library-posts">المكتبة</a>
+        <a href="#morning-posts">الطابور الصباحي</a>
+        <a href="#mawlid-posts">المولد النبوي</a>
+        <a href="#teacher-posts">الحصص التطبيقية</a>
+        <a href="#about-scouts">الكشافة</a>
         <a href="https://web.facebook.com/profile.php?id=100057441309227&sk" target="_blank" rel="noopener noreferrer">صفحة المدرسة على فيسبوك</a>
       </div>
       <div class="footer-col">

@@ -42,24 +42,41 @@ if (floatingTop) {
 const header = document.querySelector(".top-header");
 const menuToggle = document.querySelector(".menu-toggle");
 const siteNav = document.querySelector("#site-nav");
+const navBackdrop = document.querySelector("#nav-backdrop");
 
 const closeMenu = () => {
   if (!header || !menuToggle) return;
   header.classList.remove("menu-open");
+  document.body.classList.remove("body-menu-open");
   menuToggle.setAttribute("aria-expanded", "false");
   menuToggle.setAttribute("aria-label", "فتح القائمة");
+  if (navBackdrop) {
+    navBackdrop.setAttribute("aria-hidden", "true");
+  }
 };
 
 if (header && menuToggle && siteNav) {
+  if (navBackdrop) {
+    navBackdrop.setAttribute("aria-hidden", "true");
+  }
+
   menuToggle.addEventListener("click", () => {
     const isOpen = header.classList.toggle("menu-open");
+    document.body.classList.toggle("body-menu-open", isOpen);
     menuToggle.setAttribute("aria-expanded", String(isOpen));
     menuToggle.setAttribute("aria-label", isOpen ? "إغلاق القائمة" : "فتح القائمة");
+    if (navBackdrop) {
+      navBackdrop.setAttribute("aria-hidden", String(!isOpen));
+    }
   });
 
   siteNav.querySelectorAll("a").forEach((link) => {
     link.addEventListener("click", closeMenu);
   });
+
+  if (navBackdrop) {
+    navBackdrop.addEventListener("click", closeMenu);
+  }
 
   document.addEventListener("click", (event) => {
     if (!header.classList.contains("menu-open")) return;
